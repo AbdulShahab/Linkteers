@@ -1,0 +1,374 @@
+/*LOGIN PAGE*/
+/* @import url(../Font-Family/CircularAir-Bold.ttf);
+@import url(../Font-Family/CircularAir-Light.ttf); */
+@font-face {
+    font-family: 'CircularAir-Bold';
+    src: url(../Font-Family/CircularAir-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'CircularAir-Medium';
+    src: url(../Font-Family/CircularAir-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'CircularAir-Light';
+    src: url(../Font-Family/CircularAir-Light.ttf);
+}
+
+body {
+    font-family: 'CircularAir-Light';
+    margin: 0px;
+}
+
+.login-wrapper-main {
+    background-color: #eaf0f1;
+    height: 100vh;
+}
+
+.login-wrapper-inner {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #d5dbdd;
+    border-radius: 7px;
+}
+
+.login-left {
+
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+
+
+.login-right {
+
+    background-image: url(../images/login-page-logo_03.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.login-right-inner {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.login-left-inner {
+    text-align: center;
+    width: 55%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.login-left-inner h3 {
+    color: #393939;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'CircularAir-Medium';
+}
+
+.login-left-inner p {
+    color: #393939;
+    font-size: 13px;
+    margin: 10px 0;
+    line-height: 17px;
+}
+
+.login-form input::placeholder {
+    color: #9c9c9c;
+    opacity: 60%;
+    font-size: 13px;
+}
+
+.login-form input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    padding: 13px 16px;
+    color: #393939;
+    margin-bottom: 12px;
+    font-size: 11px;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #58ba47;
+    border: none;
+    border-radius: 30px;
+    padding: 13px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.login-form p a {
+    color: #58ba47;
+    text-decoration: none;
+}
+
+.login-form p {
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+.social-icons small:before {
+    background-color: #e0e0e0;
+    height: 1px;
+    width: 180px;
+    position: absolute;
+    content: '';
+    left: 36px;
+    top: 9px;
+}
+
+.social-icons small:after {
+    background-color: #e0e0e0;
+    height: 1px;
+    width: 180px;
+    position: absolute;
+    content: '';
+    right: 36px;
+    top: 9px;
+}
+
+.social-icons small {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    font-weight: 600;
+}
+
+.social-icons li a img {
+    width: 100%;
+}
+
+.social-icons li {
+    display: inline-block;
+    width: 10%;
+    margin: 0 7px;
+}
+
+.social-icons p {
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.login-left-inner img {
+    width: 95%;
+}
+
+.login-right-inner img {
+    width: 55%;
+}
+
+.login-right-inner p {
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.registration-wrapper-inner h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.registration-wrapper-inner {
+    padding: 50px 70px;
+    text-align: center;
+}
+
+.registration-logo {
+    width: 52px;
+}
+
+.registration-logo {
+    width: 52px;
+    margin-bottom: 30px;
+}
+
+.registration-steps {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.reg-steps-inner img {
+    width: 73px;
+}
+
+.reg-steps-inner h4 {
+    font-size: 13px;
+    margin-top: 13px;
+}
+
+.registration-steps:after {
+    content: url(../images/steps-dotted-img.png);
+    position: absolute;
+    transform: scale(0.8);
+    left: 0;
+    right: 0;
+    top: 25px;
+    z-index: 11;
+}
+
+.brdr-para h5 {
+    text-align: left;
+    color: #3c3c3c;
+    font-size: 14px;
+    display: table;
+    margin-top: -10px;
+    background-color: #fff;
+    margin-left: 35px;
+    padding: 0 12px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.registration-form {
+    text-align: left;
+}
+
+.registration-form label {
+    display: block;
+    color: #3c3c3c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.one-fourth-input {
+    width: 24%;
+    float: left;
+}
+
+.one-half-input {
+    width: 49%;
+    float: left;
+}
+
+.one-third-input {
+    width: 32.5%;
+    float: left;
+}
+
+.registration-form input,
+.time-to-call-info select {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 8px 4px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.registration-form {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.submit-btn-main {
+    display: block;
+    width: 100%;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 40px;
+}
+
+.submit-btn-main button {
+    background-color: #0f5ef7;
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 9px 30px 8px 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    border: none;
+}
+
+@media screen and (max-width:768px) {
+    .login-wrapper-inner {
+        width: 100%;
+        position: unset;
+        transform: unset;
+        background-color: #fff;
+        border: 1px solid #d5dbdd;
+        border-radius: 7px;
+        margin: 0px !important;
+    }
+
+    .login-right {
+        display: none;
+    }
+
+    .login-left {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        width: 12%;
+        margin: 0 7px;
+    }
+}
+@media screen and (max-width:428px) {
+    .login-wrapper-inner {
+        width: 100%;
+        position: unset;
+        transform: unset;
+        background-color: #fff;
+        border: 1px solid #d5dbdd;
+        border-radius: 7px;
+        margin: 0px !important;
+    }
+
+    .login-right {
+        display: none;
+    }
+
+    .login-left {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        width: 12%;
+        margin: 0 7px;
+    }
+}
