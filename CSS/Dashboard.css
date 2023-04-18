@@ -992,4 +992,150 @@ input[type="range"]::-moz-range-thumb {
 .payment-ul-li h5 {
     margin: 0px 10px;
     align-items: center;
+    font-size: 16px;
+    display: flex;
+    font-weight: 700;
+}
+
+.form-cvc {
+    box-shadow: 0px 0px 7px -4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.form-cvc h6 {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+
+}
+
+.payment-inputs {
+    border-bottom: 1px solid #dadce0;
+    padding: 15px 0px;
+}
+
+.payment-inputs .fa-check {
+    color: green;
+    font-size: 12px;
+}
+
+.payment-inputs .fa-check span {
+    color: #000;
+    font-size: 16px !important;
+    margin-left: 5px;
+    font-family: 'circular-std-book';
+
+}
+
+.form-cvc .flex-row-reverse h6 {
+    font-size: 15px !important;
+    font-family: 'circular-std-book';
+
+}
+
+.form-cvc .flex-row-reverse h6 span {
+    text-decoration: line-through;
+    margin-right: 7px;
+    color: #727586;
+
+}
+
+.fa-question-circle-o {
+    color: #673de6;
+    margin-left: 5px;
+}
+
+.input-feilds-info .form-control {
+    margin: 10px 0px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.input-feilds-info button {
+    border: none;
+    border-radius: 55px;
+    background-color: #58ba47;
+    color: #fff;
+    padding: 15px 21px;
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+}
+
+.fa-lock {
+    color: #00b090;
+    font-size: 20px;
+}
+
+.fa-lock span {
+    color: #897596;
+    font-size: 13px;
+    margin-left: 5px;
+    vertical-align: text-top;
+    font-family: 'circular-std-book';
+}
+
+.privacy-policy-col h6 {
+    color: #727586 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    margin-top: 15px !important;
+    line-height: 1.5;
+}
+
+.privacy-policy-col h6 span {
+    color: #673de6;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+    .inner-yearly-save select {
+        padding: 0px 10px !important;
+        width: 37%;
+        border: 1px solid #dadce0;
+        border-radius: 7px;
+        outline: none;
+        height: 40px;
+    }
+
+    .socail-inner input {
+        border: 1px solid #dadce0;
+        outline: none;
+        display: block;
+        width: 95%;
+        padding: .375rem .75rem !important;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff !important;
+        appearance: none;
+        border-radius: .375rem !important;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+        padding-right: 40px !important;
+    }
+
+    .input-inner-img {
+        position: absolute;
+        right: 21px;
+        top: 10px;
+    }
 }
