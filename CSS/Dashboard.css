@@ -38,6 +38,7 @@ header {
   /* background-color: #08509a; */
   color: #000;
   border-bottom: 2px solid #50aa41;
+  position: relative;
 }
 
 .total-balance p {
@@ -769,8 +770,40 @@ input[type="range"]::-moz-range-thumb {
     justify-content: space-evenly;
     margin-left: -20px;
   }
+  .field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 12px;
+    margin-left: 0px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #dfdedf;
+    -moz-appearance: textfield;
+  }
+  .price-input .separator {
+    width: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .price-input .field {
+    display: flex;
+    width: 75%;
+    height: 30px;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 768px) {
+  .input-feilds-info button {
+    border: none !important;
+    border-radius: 55px !important;
+    background-color: #58ba47 !important;
+    color: #fff;
+    padding: 7px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    outline: none;
+  }
   .naivgation-item .dropdown-btn {
     border: none;
     background-color: unset;
@@ -852,8 +885,45 @@ input[type="range"]::-moz-range-thumb {
     justify-content: end;
     padding-right: 10px !important;
   }
+  .navigation-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 0px !important;
+  }
+  .navigation-nav {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .navigation-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: unset;
+  }
+  .bars-unk {
+    display: flex;
+    align-items: center;
+    color: #58ba47;
+    font-size: 20px;
+    margin-left: 10px;
+    width: 5% !important;
+  }
+  li.nav-item {
+    padding: 0px 8px;
+    font-size: 13px;
+    margin: 5px 0px;
+  }
+  .avatar-logout {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 @media screen and (max-width: 428px) {
+  .nav-brand {
+    margin-right: 20px;
+  }
   .sorting-bar {
     background-color: #fff;
     border-radius: 13px;
@@ -1227,6 +1297,22 @@ input[type="range"]::-moz-range-thumb {
   .input-inner-img {
     position: absolute;
     right: 21px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner-yearly-save-form button {
+    border: none;
+    border-radius: 28px;
+    padding: 4px 22px;
+    background-color: #00b090;
+    color: #fff;
+    height: 33px;
+    font-size: 14px;
+  }
+  .input-inner-img {
+    position: absolute;
+    right: 35px;
     top: 10px;
   }
 }
