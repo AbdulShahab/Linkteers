@@ -137,7 +137,7 @@ li.nav-item a {
 
 .main-table .header-table-ul li {
   list-style: none;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   align-items: center;
 }
@@ -1323,6 +1323,27 @@ input[type="range"]::-moz-range-thumb {
   font-size: 14px;
 }
 
+.filtr-btn-header {
+  border-radius: 8px;
+  box-shadow: 0px 0px 7px -4px;
+}
+
+/* .sorting-icons::after {
+  content: "▼" /"";
+  position: absolute;
+  top: 4px;
+  left: 62px;
+  font-size: 13.5px;
+}
+
+.sorting-icons::before {
+  content: "▲" /"";
+  position: absolute;
+  bottom: 50%;
+  left: 64px;
+  font-size: 10px;
+} */
+
 @media screen and (max-width: 1024px) {
   .inner-yearly-save select {
     padding: 0px 10px !important;
@@ -1487,6 +1508,7 @@ input[type="range"]::-moz-range-thumb {
     font-weight: 700;
   }
 }
+
 .navbar-toggle {
   display: none;
 }
@@ -1540,4 +1562,3 @@ input[type="range"]::-moz-range-thumb {
     display: grid;
   }
 }
-

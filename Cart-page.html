@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Cart</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #d0d0d0;
+    }
+
+    /* Style the tab */
+    .main-tab {
+        overflow: hidden;
+        border: 0px solid #ccc;
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    /* Style the buttons inside the tab */
+    .main-tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+
+    /* Create an active/current tablink class */
+    .main-tab button.active {
+        background-color: #bcd5eb;
+        border: none;
+        transition: 4s ease;
+        outline: none;
+    }
+
+    /* Style the tab content */
+    .tabcontent_main {
+        display: none;
+
+    }
+
+    .tabcontent_01 {
+        display: none;
+
+    }
+
+    button.tab_btn {
+        border-radius: 35px;
+        padding: 6px 30px;
+        background-color: #fff;
+        border: 2px solid #d0d0d0;
+        transition: 2s ease;
+        outline: none;
+    }
+
+    .cart-inner-tab {
+        display: grid;
+    }
+
+
+    .quantity {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #d0d0d0;
+        padding: 10px 0px;
+        border-radius: 49px;
+        justify-content: center;
+        top: 10px;
+    }
+
+    .quantity button {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        font-size: 16px;
+        height: 24px;
+        width: 24px;
+    }
+
+    .quantity input {
+        border: none;
+        font-size: 16px;
+        height: 24px;
+        text-align: center;
+        width: 50px;
+        background-color: transparent;
+    }
+
+    .quantity label {
+        position: absolute;
+        top: -25px;
+        left: 20px;
+    }
+
+    .tab-inner-icon {
+        display: flex;
+        font-size: 20px;
+        margin-top: 4px;
+        color: #d0d0d0;
+    }
+
+    i.fa.fa-heart-o {
+        border-right: 1px solid;
+        padding-right: 30px;
+        margin-right: 25px;
+    }
+
+    .tab-first-sec {
+        padding: 25px 20px;
+        background-color: #fff;
+        margin-top: 15px !important;
+        border-radius: 8px;
+        margin: 0px auto;
+    }
+
+    .tab-inner-icon-01 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #d0d0d0;
+    }
+</style>
+
+<body>
+
+    <main>
+        <div class="container">
+            <h3>Cart</h3>
+            <div class="main-tab">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <button class="tab_btn active" onclick="openCity(event, 'London')">London</button>
+                    </div>
+                    <div class="item"><button class="tab_btn" onclick="openCity(event, 'Paris')">Paris</button></div>
+                    <div class="item"><button class="tab_btn" onclick="openCity(event, 'Tokyo')">Tokyo</button></div>
+                </div>
+            </div>
+
+            <div id="London" class="tabcontent_main" style="display: block;">
+                <div class="row tab-first-sec">
+                    <div class="col-lg-8">
+                        <div class="cart-inner-tab">
+                            <a href="#">Digitalcryptobox.com</a>
+                            <span>Category:Cryptocurrency</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="quantity">
+                            <label for="button">Order Quantity</label>
+                            <button class="minus">-</button>
+                            <input type="number" min="1" max="10" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="display: flex;align-items: center;justify-content: end;">
+                        <div class="tab-inner-icon">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-first-sec">
+                    <div class="col-lg-4">
+                        <div class="cart-inner-tab-01">
+                            <h3>Quantity 1</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="tab_btn_1 active" onclick="inner_tabs(event, 'tab_01')"><input type="radio">
+                            Provide Content</button>
+                        <button class="tab_btn_1" onclick="inner_tabs(event, 'tab_02')"><input type="radio">Hire Content
+                            Writer</button>
+                        <button class="tab_btn_1" onclick="inner_tabs(event, 'tab_03')"><input type="radio">Link
+                            Insertion</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <span>$19</span>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tab-inner-icon-01">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="tab_01" class="tabcontent_01" style="display: block;">
+                            <h3>Paris</h3>
+                            <p>Paris is the capital of France.</p>
+                        </div>
+                        <div id="tab_02" class="tabcontent_01">
+                            <h3>Paris</h3>
+                            <p>Paris is the capital of France.</p>
+                        </div>
+                        <div id="tab_03" class="tabcontent_01">
+                            <h3>Paris</h3>
+                            <p>Paris is the capital of France.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Paris" class="tabcontent_main">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Tokyo" class="tabcontent_main">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+
+
+
+        </div>
+    </main>
+    <script>
+        function inner_tabs(evt, inner_tabs) {
+            var i, tabcontent_01, tab_btn_1;
+            tabcontent_01 = document.getElementsByClassName("tabcontent_01");
+            for (i = 0; i < tabcontent_01.length; i++) {
+                tabcontent_01[i].style.display = "none";
+            }
+            tab_btn_1 = document.getElementsByClassName("tab_btn_1");
+            for (i = 0; i < tab_btn_1.length; i++) {
+                tab_btn_1[i].className = tab_btn_1[i].className.replace(" active", "");
+            }
+            document.getElementById(inner_tabs).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent_main, tab_btn;
+            tabcontent_main = document.getElementsByClassName("tabcontent_main");
+            for (i = 0; i < tabcontent_main.length; i++) {
+                tabcontent_main[i].style.display = "none";
+            }
+            tab_btn = document.getElementsByClassName("tab_btn");
+            for (i = 0; i < tab_btn.length; i++) {
+                tab_btn[i].className = tab_btn[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script>$(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) + 1;
+                count = count > 10 ? 10 : count;
+                $input.val(count);
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 3,
+                    nav: true
+                },
+                600: {
+                    items: 4,
+                    nav: false
+                },
+                1000: {
+                    items: 8,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
