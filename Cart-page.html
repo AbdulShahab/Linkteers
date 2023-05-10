@@ -16,160 +16,34 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="CSS/cart.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #d0d0d0;
-    }
-
-    /* Style the tab */
-    .main-tab {
-        overflow: hidden;
-        border: 0px solid #ccc;
-        background-color: #ffffff;
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-
-    /* Style the buttons inside the tab */
-    .main-tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.3s;
-        font-size: 17px;
-    }
-
-
-    /* Create an active/current tablink class */
-    .main-tab button.active {
-        background-color: #bcd5eb;
-        border: none;
-        transition: 4s ease;
-        outline: none;
-    }
-
-    /* Style the tab content */
-    .tabcontent_main {
-        display: none;
-
-    }
-
-    .tabcontent_01 {
-        display: none;
-
-    }
-
-    button.tab_btn {
-        border-radius: 35px;
-        padding: 6px 30px;
-        background-color: #fff;
-        border: 2px solid #d0d0d0;
-        transition: 2s ease;
-        outline: none;
-    }
-
-    .cart-inner-tab {
-        display: grid;
-    }
-
-
-    .quantity {
-        display: flex;
-        align-items: center;
-        position: relative;
-        background-color: #d0d0d0;
-        padding: 10px 0px;
-        border-radius: 49px;
-        justify-content: center;
-        top: 10px;
-    }
-
-    .quantity button {
-        background-color: transparent;
-        border: none;
-        color: #333;
-        cursor: pointer;
-        font-size: 16px;
-        height: 24px;
-        width: 24px;
-    }
-
-    .quantity input {
-        border: none;
-        font-size: 16px;
-        height: 24px;
-        text-align: center;
-        width: 50px;
-        background-color: transparent;
-    }
-
-    .quantity label {
-        position: absolute;
-        top: -25px;
-        left: 20px;
-    }
-
-    .tab-inner-icon {
-        display: flex;
-        font-size: 20px;
-        margin-top: 4px;
-        color: #d0d0d0;
-    }
-
-    i.fa.fa-heart-o {
-        border-right: 1px solid;
-        padding-right: 30px;
-        margin-right: 25px;
-    }
-
-    .tab-first-sec {
-        padding: 25px 20px;
-        background-color: #fff;
-        margin-top: 15px !important;
-        border-radius: 8px;
-        margin: 0px auto;
-    }
-
-    .tab-inner-icon-01 {
-        display: flex;
-        justify-content: space-between;
-        font-size: 22px;
-        color: #d0d0d0;
-    }
-</style>
 
 <body>
-
     <main>
         <div class="container">
             <h3>Cart</h3>
             <div class="main-tab">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <button class="tab_btn active" onclick="openCity(event, 'London')">London</button>
+                        <button class="tab_btn active" onclick="openCity(event, 'London')">Digitalcryptobox</button>
                     </div>
-                    <div class="item"><button class="tab_btn" onclick="openCity(event, 'Paris')">Paris</button></div>
-                    <div class="item"><button class="tab_btn" onclick="openCity(event, 'Tokyo')">Tokyo</button></div>
+                    <div class="item"><button class="tab_btn"
+                            onclick="openCity(event, 'Paris')">Themakeupartist</button></div>
+                    <div class="item"><button class="tab_btn"
+                            onclick="openCity(event, 'Tokyo')">Usefuldiyprojects</button></div>
                 </div>
             </div>
 
             <div id="London" class="tabcontent_main" style="display: block;">
                 <div class="row tab-first-sec">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-8">
                         <div class="cart-inner-tab">
                             <a href="#">Digitalcryptobox.com</a>
                             <span>Category:Cryptocurrency</span>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <div class="quantity">
                             <label for="button">Order Quantity</label>
                             <button class="minus">-</button>
@@ -177,7 +51,8 @@
                             <button class="plus">+</button>
                         </div>
                     </div>
-                    <div class="col-lg-2" style="display: flex;align-items: center;justify-content: end;">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2"
+                        style="display: flex;align-items: center;justify-content: end;">
                         <div class="tab-inner-icon">
                             <i class="fa fa-heart-o" aria-hidden="true"></i>
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -185,73 +60,517 @@
                     </div>
                 </div>
                 <div class="row tab-first-sec">
-                    <div class="col-lg-4">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12">
                         <div class="cart-inner-tab-01">
                             <h3>Quantity 1</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <button class="tab_btn_1 active" onclick="inner_tabs(event, 'tab_01')"><input type="radio">
-                            Provide Content</button>
-                        <button class="tab_btn_1" onclick="inner_tabs(event, 'tab_02')"><input type="radio">Hire Content
-                            Writer</button>
-                        <button class="tab_btn_1" onclick="inner_tabs(event, 'tab_03')"><input type="radio">Link
-                            Insertion</button>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-8">
+                        <div class="tab">
+                            <div class="tab-butn">
+                                <input type="radio" name="uni" checked="checked" id="uni_1">
+                                <label class="tablinks active" for="uni_1" onclick="openinner_tab(event, 'Provide')">
+                                    Provide Content</label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_2" type="radio" name="uni"> <span for="uni_2">
+                                    <label class="tablinks" for="uni_2" onclick="openinner_tab(event, 'hire-Writer')">
+                                        Hire Content Writer
+                                    </label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_3" type="radio" name="uni" for="uni_3">
+                                <label class="tablinks" for="uni_3" onclick="openinner_tab(event, 'Coming-soon')">
+                                    Usefuldiyprojects</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2">
                         <span>$19</span>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <div class="tab-inner-icon-01">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                             <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div id="tab_01" class="tabcontent_01" style="display: block;">
-                            <h3>Paris</h3>
-                            <p>Paris is the capital of France.</p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div id="Provide" class="tabcontent" style="display: block;">
+                            <p>Attachment <Span>*</Span>Note:Support Only Doc, Docx, Txt.</p>
+                            <div class="atch-outer">
+                                <form action="/action_page.php">
+                                    <input type="file" id="myFile" name="filename" accept="Doc,Docx,Txt">
+                                </form>
+                                <br>
+                                <p>Specail Instructions</p>
+                                <textarea name="" id="" rows="4" placeholder="" Add Specail Instruction></textarea>
+                            </div>
+                            <div class="outer-sbmt-btn">
+                                <button class="inner-btn-1" type="submit">Submit</button>
+                                <button class="inner-btn-2" type="reset">Clear</button>
+                            </div>
+
                         </div>
-                        <div id="tab_02" class="tabcontent_01">
-                            <h3>Paris</h3>
-                            <p>Paris is the capital of France.</p>
+
+                        <div id="hire-Writer" class="tabcontent">
+                            <form action="">
+                                <div class="inner-downlaod-btn col-lg-12">
+                                    <button class="sample-download-btn">Download Sample <i class="fa fa-download"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label for="" class="label-txt-inner">Word Count <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">500</option>
+                                            <option value="">600</option>
+                                            <option value="">1000</option>
+                                            <option value="">2000</option>
+                                            <option value="">3000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Title Suggestion</label> <br>
+                                        <input class="form-control" type="text" placeholder="Enter Title">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Category <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="" class="label-txt-inner">Keywords <span>*</span></label><br>
+                                    <input class="form-control" type="text" placeholder="Enter keywords">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Reference Link</label> <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Landing Page URL <span>*</span></label>
+                                        <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Anchor Text <span>*</span></label> <br>
+                                        <input class="form-control" type="text" name="" id=""
+                                            placeholder="Enter Anchor Text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Preferred Language <span>*</span></label>
+                                        <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Language</option>
+                                            <option value="">English</option>
+                                            <option value="">Hindi</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">Sindhi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Target Audience Is From (Country)
+                                            <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">India</option>
+                                            <option value="">Pakistan</option>
+                                            <option value="">UK</option>
+                                            <option value="">US</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12 inner-tab-btm-btn">
+                                        <a href="#">Go To Order Summary <i class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div id="tab_03" class="tabcontent_01">
-                            <h3>Paris</h3>
-                            <p>Paris is the capital of France.</p>
+                        <div id="Coming-soon" class="tabcontent">
+                            Coming Soon
                         </div>
                     </div>
                 </div>
 
             </div>
-
             <div id="Paris" class="tabcontent_main">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p>
+                <div class="row tab-first-sec">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                        <div class="cart-inner-tab">
+                            <a href="#">Digitalcryptobox.com</a>
+                            <span>Category:Cryptocurrency</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <div class="quantity">
+                            <label for="button">Order Quantity</label>
+                            <button class="minus">-</button>
+                            <input type="number" min="1" max="10" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2"
+                        style="display: flex;align-items: center;justify-content: end;">
+                        <div class="tab-inner-icon">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-first-sec">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12">
+                        <div class="cart-inner-tab-01">
+                            <h3>Quantity 1</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-8">
+                        <div class="tab">
+                            <div class="tab-butn">
+                                <input type="radio" name="uni"  id="uni_1">
+                                <label class="tablinks active" for="uni_1" onclick="openinner_tab(event, 'Provide')">
+                                    Provide Content</label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_2" type="radio" name="uni"> <span for="uni_2">
+                                    <label class="tablinks" for="uni_2" onclick="openinner_tab(event, 'hire-Writer')">
+                                        Hire Content Writer
+                                    </label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_3" type="radio" name="uni" for="uni_3">
+                                <label class="tablinks" for="uni_3" onclick="openinner_tab(event, 'Coming-soon')">
+                                    Usefuldiyprojects</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2">
+                        <span>$19</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <div class="tab-inner-icon-01">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div id="Provide" class="tabcontent" style="display: block;">
+                            <p>Attachment <Span>*</Span>Note:Support Only Doc, Docx, Txt.</p>
+                            <div class="atch-outer">
+                                <form action="/action_page.php">
+                                    <input type="file" id="myFile" name="filename" accept="Doc,Docx,Txt">
+                                </form>
+                                <br>
+                                <p>Specail Instructions</p>
+                                <textarea name="" id="" rows="4" placeholder="" Add Specail Instruction></textarea>
+                            </div>
+                            <div class="outer-sbmt-btn">
+                                <button class="inner-btn-1" type="submit">Submit</button>
+                                <button class="inner-btn-2" type="reset">Clear</button>
+                            </div>
+
+                        </div>
+
+                        <div id="hire-Writer" class="tabcontent">
+                            <form action="">
+                                <div class="inner-downlaod-btn col-lg-12">
+                                    <button class="sample-download-btn">Download Sample <i class="fa fa-download"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label for="" class="label-txt-inner">Word Count <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">500</option>
+                                            <option value="">600</option>
+                                            <option value="">1000</option>
+                                            <option value="">2000</option>
+                                            <option value="">3000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Title Suggestion</label> <br>
+                                        <input class="form-control" type="text" placeholder="Enter Title">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Category <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="" class="label-txt-inner">Keywords <span>*</span></label><br>
+                                    <input class="form-control" type="text" placeholder="Enter keywords">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Reference Link</label> <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Landing Page URL <span>*</span></label>
+                                        <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Anchor Text <span>*</span></label> <br>
+                                        <input class="form-control" type="text" name="" id=""
+                                            placeholder="Enter Anchor Text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Preferred Language <span>*</span></label>
+                                        <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Language</option>
+                                            <option value="">English</option>
+                                            <option value="">Hindi</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">Sindhi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Target Audience Is From (Country)
+                                            <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">India</option>
+                                            <option value="">Pakistan</option>
+                                            <option value="">UK</option>
+                                            <option value="">US</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12 inner-tab-btm-btn">
+                                        <a href="#">Go To Order Summary <i class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="Coming-soon" class="tabcontent">
+                            Coming Soon
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="Tokyo" class="tabcontent_main">
-                <h3>Tokyo</h3>
-                <p>Tokyo is the capital of Japan.</p>
+                <div class="row tab-first-sec">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                        <div class="cart-inner-tab">
+                            <a href="#">Digitalcryptobox.com</a>
+                            <span>Category:Cryptocurrency</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <div class="quantity">
+                            <label for="button">Order Quantity</label>
+                            <button class="minus">-</button>
+                            <input type="number" min="1" max="10" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2"
+                        style="display: flex;align-items: center;justify-content: end;">
+                        <div class="tab-inner-icon">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-first-sec">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12">
+                        <div class="cart-inner-tab-01">
+                            <h3>Quantity 1</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-8">
+                        <div class="tab">
+                            <div class="tab-butn">
+                                <input type="radio" name="uni" checked="checked" id="uni_1">
+                                <label class="tablinks active" for="uni_1" onclick="openinner_tab(event, 'Provide')">
+                                    Provide Content</label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_2" type="radio" name="uni"> <span for="uni_2">
+                                    <label class="tablinks" for="uni_2" onclick="openinner_tab(event, 'hire-Writer')">
+                                        Hire Content Writer
+                                    </label>
+                            </div>
+                            <div class="tab-butn">
+                                <input id="uni_3" type="radio" name="uni" for="uni_3">
+                                <label class="tablinks" for="uni_3" onclick="openinner_tab(event, 'Coming-soon')">
+                                    Usefuldiyprojects</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-2">
+                        <span>$19</span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <div class="tab-inner-icon-01">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div id="Provide" class="tabcontent" style="display: block;">
+                            <p>Attachment <Span>*</Span>Note:Support Only Doc, Docx, Txt.</p>
+                            <div class="atch-outer">
+                                <form action="/action_page.php">
+                                    <input type="file" id="myFile" name="filename" accept="Doc,Docx,Txt">
+                                </form>
+                                <br>
+                                <p>Specail Instructions</p>
+                                <textarea name="" id="" rows="4" placeholder="" Add Specail Instruction></textarea>
+                            </div>
+                            <div class="outer-sbmt-btn">
+                                <button class="inner-btn-1" type="submit">Submit</button>
+                                <button class="inner-btn-2" type="reset">Clear</button>
+                            </div>
+
+                        </div>
+
+                        <div id="hire-Writer" class="tabcontent">
+                            <form action="">
+                                <div class="inner-downlaod-btn col-lg-12">
+                                    <button class="sample-download-btn">Download Sample <i class="fa fa-download"
+                                            aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <label for="" class="label-txt-inner">Word Count <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">500</option>
+                                            <option value="">600</option>
+                                            <option value="">1000</option>
+                                            <option value="">2000</option>
+                                            <option value="">3000</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Title Suggestion</label> <br>
+                                        <input class="form-control" type="text" placeholder="Enter Title">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <label for="" class="label-txt-inner">Category <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                            <option value="">Unknown</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="" class="label-txt-inner">Keywords <span>*</span></label><br>
+                                    <input class="form-control" type="text" placeholder="Enter keywords">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Reference Link</label> <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Landing Page URL <span>*</span></label>
+                                        <br>
+                                        <input class="form-control" type="text" placeholder="eg.http://example.com">
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="" class="label-txt-inner">Anchor Text <span>*</span></label> <br>
+                                        <input class="form-control" type="text" name="" id=""
+                                            placeholder="Enter Anchor Text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Preferred Language <span>*</span></label>
+                                        <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">Language</option>
+                                            <option value="">English</option>
+                                            <option value="">Hindi</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">Sindhi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="label-txt-inner">Target Audience Is From (Country)
+                                            <span>*</span></label> <br>
+                                        <select name="" id="" class="form-control">
+                                            <option value="">India</option>
+                                            <option value="">Pakistan</option>
+                                            <option value="">UK</option>
+                                            <option value="">US</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12 inner-tab-btm-btn">
+                                        <a href="#">Go To Order Summary <i class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="Coming-soon" class="tabcontent">
+                            Coming Soon
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
 
 
         </div>
     </main>
     <script>
-        function inner_tabs(evt, inner_tabs) {
-            var i, tabcontent_01, tab_btn_1;
-            tabcontent_01 = document.getElementsByClassName("tabcontent_01");
-            for (i = 0; i < tabcontent_01.length; i++) {
-                tabcontent_01[i].style.display = "none";
+        $(document).ready(function () {
+
+            //input = $('#uni_1').attr('', true);
+        });
+        function openinner_tab(evt, cityName) {
+
+
+
+
+
+
+
+            // alert(check);
+            // if (check==true) {
+            //     var check = $('.tablinks active input[type="radio"]').attr('', true);
+            // }else{
+            //     $('..tablinks active input[type="radio"]').removeAttr("");
+            // }
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-            tab_btn_1 = document.getElementsByClassName("tab_btn_1");
-            for (i = 0; i < tab_btn_1.length; i++) {
-                tab_btn_1[i].className = tab_btn_1[i].className.replace(" active", "");
+            tablinks = document.getElementsByClassName("tablinks");
+            var number = 1;
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace("active", "");
+
+
             }
-            document.getElementById(inner_tabs).style.display = "block";
+            document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
     </script>
@@ -297,15 +616,15 @@
             responsiveClass: true,
             responsive: {
                 0: {
-                    items: 3,
+                    items: 2,
                     nav: true
                 },
                 600: {
-                    items: 4,
+                    items: 2,
                     nav: false
                 },
                 1000: {
-                    items: 8,
+                    items: 4,
                     nav: true,
                     loop: false
                 }

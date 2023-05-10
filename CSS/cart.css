@@ -1,0 +1,401 @@
+    .tab button.active {
+        background-color: red !important;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f3f3f3;
+    }
+
+    /* Style the tab */
+    .main-tab {
+        overflow: hidden;
+        border: 0px solid #ccc;
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    /* Style the buttons inside the tab */
+    .main-tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+
+    /* Create an active/current tablink class */
+    .main-tab button.active {
+        background-color: #cde3ef;
+        border: none;
+        transition: 4s ease;
+        outline: none;
+        padding: 8px 30px;
+    }
+
+    /* Style the tab content */
+    .tabcontent_main {
+        display: none;
+
+    }
+
+    button.tab_btn {
+        border-radius: 35px;
+        padding: 6px 30px;
+        background-color: #fff;
+        border: 2px solid #d0d0d0;
+        transition: 2s ease;
+        outline: none;
+        color: #38627b;
+    }
+
+    .cart-inner-tab-01 h3 {
+        color: #275570;
+        margin: 0px;
+    }
+
+    .cart-inner-tab {
+        display: grid;
+    }
+
+
+    .quantity {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #d0d0d0;
+        padding: 10px 0px;
+        border-radius: 49px;
+        justify-content: center;
+        top: 10px;
+    }
+
+    .quantity button {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        font-size: 16px;
+        height: 24px;
+        width: 24px;
+    }
+
+    .quantity input {
+        border: none;
+        font-size: 16px;
+        height: 24px;
+        text-align: center;
+        width: 50px;
+        background-color: transparent;
+    }
+
+    .quantity label {
+        position: absolute;
+        top: -25px;
+        left: 20px;
+    }
+
+    .tab-inner-icon {
+        display: flex;
+        font-size: 20px;
+        margin-top: 4px;
+        color: #d0d0d0;
+    }
+
+    i.fa.fa-heart-o {
+        border-right: 1px solid;
+        padding-right: 30px;
+        margin-right: 25px;
+    }
+
+    .tab-first-sec {
+        padding: 25px 20px;
+        background-color: #fff;
+        margin-top: 15px !important;
+        border-radius: 8px;
+        margin: 0px auto;
+        align-items: center;
+        margin-bottom: 20px;
+        overflow: auto;
+    }
+
+    .tab-inner-icon-01 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: #d0d0d0;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 0px solid #ccc;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: start;
+        padding: 15px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: transparent;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+    }
+
+    .tab-butn {
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 15px;
+    }
+
+    .atch-outer textarea {
+        resize: none;
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+    }
+
+    .atch-outer form {
+        padding: 10px;
+        border: 1px dashed #9f9f9f;
+        border-radius: 4px;
+    }
+
+    .outer-sbmt-btn {
+        display: flex;
+        justify-content: end;
+    }
+
+    .outer-sbmt-btn .inner-btn-1 {
+        background-color: #275570;
+        border: none;
+        outline: none;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+
+    .outer-sbmt-btn .inner-btn-2 {
+        background-color: #fff;
+        border: none;
+        outline: none;
+        color: #275570;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 20px;
+        border: 1px solid #979797;
+    }
+
+    input::file-selector-button {
+        color: #000;
+        border: none grey;
+        border-radius: 3px;
+        background-color: #f0f0f0;
+        font-size: 14px;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    #Provide p span {
+        color: #dd3557;
+        margin-right: 4px;
+    }
+
+    button.sample-download-btn {
+        border: none;
+        margin-top: 25px;
+        padding: 10px 20px;
+        color: #575757;
+        background-color: transparent;
+    }
+
+    .cart-inner-tab a {
+        color: #319ddd;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .cart-inner-tab span {
+        color: #97a4c3;
+        margin-top: 5px;
+    }
+
+    .inner-downlaod-btn {
+        display: flex;
+        justify-content: end;
+    }
+
+    .label-txt-inner {
+        color: #575757;
+        font-weight: 500;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .label-txt-inner span {
+        color: #dd3557;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #d5d5d5;
+        -webkit-appearance: auto;
+        -moz-appearance: none;
+        appearance: revert;
+        border-radius: .375rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    ::placeholder {
+        color: #9797b2;
+        font-size: 14px;
+    }
+
+    .inner-tab-btm-btn {
+        justify-content: center;
+        display: flex;
+        margin: 40px 0px;
+    }
+
+    .inner-tab-btm-btn a {
+        color: #c4c4c7;
+        background-color: #275570;
+        padding: 15px 25px;
+        border-radius: 29px;
+        text-decoration: none;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .tab-first-sec {
+            padding: 25px 20px;
+            background-color: #fff;
+            margin-top: 15px !important;
+            border-radius: 8px;
+            margin: 0px auto;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: auto;
+            width: 740px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .cart-inner-tab a {
+            color: #319ddd;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        button.tab_btn {
+            border-radius: 35px;
+            padding: 5px 20px;
+            background-color: #fff;
+            border: 2px solid #d0d0d0;
+            transition: 2s ease;
+            outline: none;
+            color: #38627b;
+            font-size: 14px;
+        }
+
+        .main-tab button.active {
+            background-color: #cde3ef;
+            border: none;
+            transition: 2s ease;
+            outline: none;
+            padding: 8px 30px;
+        }
+
+        .quantity label {
+            position: absolute;
+            top: -42px;
+            left: 10px;
+            font-size: 14px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: #d0d0d0;
+            padding: 5px 015px;
+            border-radius: 49px;
+            justify-content: center;
+            top: 10px;
+        }
+
+        .cart-inner-tab span {
+            color: #97a4c3;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .cart-inner-tab-01 h3 {
+            color: #275570;
+            margin: 0px;
+            font-size: 22px;
+        }
+
+        .outer-sbmt-btn .inner-btn-1 {
+            background-color: #275570;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 4px 20px;
+            border-radius: 5px;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .tab-butn {
+            padding: 10px 5px;
+            border: 1px solid #d5d5d5;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+            margin-right: 6px;
+            border-radius: 5px;
+        }
+    }

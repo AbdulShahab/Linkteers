@@ -39,6 +39,7 @@ header {
   color: #000;
   border-bottom: 2px solid #50aa41;
   position: relative;
+  background-color: #fff !important;
 }
 
 .total-balance p {
@@ -722,6 +723,27 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
+#myPagination button {
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  padding: 3px 22px;
+  background-color: #58ba47;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.drop-dwn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.drop-dwn-container .form-control {
+  width: 40%;
+  padding: 5px 10px !important;
+}
+
 /* .main-table:hover {
     border: 1px solid #58ba47;
 } */
@@ -795,6 +817,10 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 768px) {
+  .input-services {
+    margin-top: 15px !important;
+  }
+
   .input-feilds-info button {
     border: none !important;
     border-radius: 55px !important;
@@ -832,7 +858,7 @@ input[type="range"]::-moz-range-thumb {
     align-items: center;
   }
 
-  .all-content-main-col {
+  .for_table-overflo {
     overflow: auto;
   }
 
@@ -993,7 +1019,7 @@ input[type="range"]::-moz-range-thumb {
     width: 800px;
   }
 
-  .all-content-main-col {
+  .for_table-overflo {
     overflow: auto;
   }
 
@@ -1005,6 +1031,7 @@ input[type="range"]::-moz-range-thumb {
     color: #000 !important;
     padding: 0px 10px;
   }
+
 }
 
 /* -----------------------Domains Result----------------------------- */
@@ -1196,7 +1223,7 @@ input[type="range"]::-moz-range-thumb {
 
 .input-inner-img {
   position: absolute;
-  right: 11rem;
+  right: 11.5rem;
   top: 10px;
 }
 
