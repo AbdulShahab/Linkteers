@@ -73,21 +73,19 @@
     <section>
       <div class="main-content-section">
         <div class="row">
-          <div class="col-lg-3 sidebar-main-col" style="padding-left: 23px;
-                padding-right: 10px;
-                z-index: 999;">
+          <div class="col-lg-3 col-md-3 sidebar-main-col" style="padding-left: 23px;padding-right: 10px; z-index: 999;">
             <div class="side-bar-filter">
               <div class="filter-btn">
-                <i class="fa fa-filter" aria-hidden="true"> <span> Filter</span> </i>
+                <i class="fa fa-filter" aria-hidden="true"> <span> Advance Filter</span> </i>
               </div>
-
+  
               <div class="side-bar-section">
                 <sidebar-nav class="naivgation-item ">
                   <button class="dropdown-btn">Domain Authority (DA)
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <div class="price-input">
+                    <!-- <div class="price-input">
                       <div class="field">
                         <input type="number" class="input-min" value="2500">
                       </div>
@@ -102,7 +100,12 @@
                     <div class="range-input">
                       <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
                       <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                    </div> -->
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
                     </div>
+  
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item ">
@@ -110,19 +113,21 @@
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
+                    </div>
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item">
-                  <button class="dropdown-btn">Organic Traffic
+                  <button class="dropdown-btn">Ahref Traffic
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
+                    </div>
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item">
@@ -130,19 +135,24 @@
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <select multiple class="form-control">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">Option 4</option>
+                    </select>
+  
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item">
-                  <button class="dropdown-btn">Client URL
+                  <button class="dropdown-btn">Semrush Traffic
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
+                    </div>
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item">
@@ -150,54 +160,35 @@
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <div class="inner-checbox">
-                      <input type="checkbox" name="Dofollow">
-                      <label for="Dofollow">Dofollow</label>
-                    </div>
-                    <div class="inner-checbox">
-                      <input type="checkbox" name="Nofollow">
-                      <label for="Nofollow">Nofollow</label>
-                    </div>
-                    <div class="inner-checbox">
-                      <input type="checkbox" name="Sponsored">
-                      <label for="Sponsored">Sponsored</label>
+                    <select class="form-control" name="" id="">
+                      <option value="">Option</option>
+                      <option value="">Option1</option>
+                      <option value="">Option2</option>
+                      <option value="">Option3</option>
+  
+                    </select>
+                  </div>
+                </sidebar-nav>
+                <sidebar-nav class="naivgation-item">
+                  <button class="dropdown-btn">Spam Score
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
                     </div>
                   </div>
                 </sidebar-nav>
                 <sidebar-nav class="naivgation-item">
-                  <button class="dropdown-btn">Hosting Location
+                  <button class="dropdown-btn">Price
                     <i class="fa fa-chevron-down"></i>
                   </button>
                   <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                  </div>
-                </sidebar-nav>
-                <sidebar-nav class="naivgation-item">
-                  <button class="dropdown-btn">Traffic Percentage
-                    <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <div class="dropdown-container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                  </div>
-                </sidebar-nav>
-                <sidebar-nav class="naivgation-item">
-                  <button class="dropdown-btn">Cost Filtering
-                    <i class="fa fa-chevron-down"></i>
-                  </button>
-                  <div class="dropdown-container">
-                    <div class="inner-checbox">
-                      <input type="checkbox" name="Trust Flow">
-                      <label for="Trust Flow">Trust Flow</label>
+                    <div class="drop-dwn-container">
+                      <input class="form-control" type="text" name="" id="" placeholder="Min">
+                      <input class="form-control" type="text" name="" id="" placeholder="Max">
                     </div>
-                    <div class="inner-checbox">
-                      <input type="checkbox" name="Citation Flow">
-                      <label for="Citation Flow">Citation Flow</label>
-                    </div>
-
                   </div>
                 </sidebar-nav>
                 <div class="botm-img-content">
@@ -206,7 +197,7 @@
                     to purchase. </p>
                 </div>
               </div>
-
+  
             </div>
           </div>
           <div class="all-content-main-col col-lg-9">
@@ -316,6 +307,18 @@
             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
           }
         });
+      });
+
+    </script>
+    <script>
+      const navbarToggle = document.querySelector('.navbar-toggle');
+      const navbarLinks = document.querySelector('.navbar-links');
+      const navbar_links_01 = document.querySelector('.navbar_links_01');
+
+      navbarToggle.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+        navbar_links_01.classList.toggle('active');
+
       });
 
     </script>

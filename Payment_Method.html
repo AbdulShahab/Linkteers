@@ -21,7 +21,7 @@
 
     .payment-img-3 {
       margin-left: -85px !important;
-    } 
+    }
   }
 </style>
 
@@ -457,6 +457,18 @@
             range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
           }
         });
+      });
+
+    </script>
+    <script>
+      const navbarToggle = document.querySelector('.navbar-toggle');
+      const navbarLinks = document.querySelector('.navbar-links');
+      const navbar_links_01 = document.querySelector('.navbar_links_01');
+
+      navbarToggle.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+        navbar_links_01.classList.toggle('active');
+
       });
 
     </script>
