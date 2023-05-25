@@ -181,7 +181,7 @@ i.fa.fa-bell:hover {
   transition: 1s;
 }
 
-.dropdown i {
+.dropdown-01 i {
   font-size: 20px;
   color: #dbdde0 !important;
   margin-right: 2px;
@@ -190,16 +190,6 @@ i.fa.fa-bell:hover {
   border-radius: 100%;
 }
 
-.dropdown button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #000;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.dropdown button {}
 
 .nav-link:focus,
 .nav-link:hover {
@@ -289,6 +279,7 @@ nav ul.navbar {
   margin-top: 15px;
   box-shadow: 0px 0px 7px -1px #e5e5e5;
   margin-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 .domain-auth {
@@ -440,7 +431,11 @@ nav ul.navbar {
 .all-content-main-col {
   padding: 0px 10px !important;
   background-color: #f4f4f4;
-  margin-top: 25px !important;
+
+}
+
+.inner-side-bar input {
+  padding: 7px !important;
 }
 
 .inner-sort-btn li button {
@@ -786,10 +781,88 @@ input[type="range"]::-moz-range-thumb {
   background-color: #f1f1f1;
 }
 
-
+.dropdown-01 button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+}
 
 .dropdown-menu li:first-child a:hover {
   background-color: #f1f1f1;
+}
+
+.filter-dropdown {
+  position: relative;
+
+}
+
+.filter-dropdown a {
+  color: #000;
+  text-decoration: none;
+}
+
+.filtr-frm-cntrl {
+  margin-bottom: 10px;
+  padding: 5px 5px !important;
+  width: 100px !important;
+}
+
+.flter-head {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px !important;
+}
+
+.paginate {
+  padding: 0;
+  margin: 0;
+}
+
+.paginate>li {
+  list-style: none;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.inner-side-bar {
+  padding: 0px 20px;
+}
+
+.sidebar-advn-fltr h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.traffc-percentage {
+  display: flex;
+  justify-content: space-around;
+}
+
+.traffc-percentage .form-control {
+  width: 45%;
+  padding: 7px 10px !important;
+  margin-right: 15px;
+}
+
+.horizoantal-flter {
+  display: flex;
+  border-radius: 18px;
+  background-color: #ffff;
+  padding: 0px 5px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  width: 990;
+}
+
+.horizoantal-flter ul {
+  padding: 0px 10px;
+  list-style: none;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 992px) {
@@ -838,9 +911,15 @@ input[type="range"]::-moz-range-thumb {
 
 @media screen and (max-width: 992px) {
   .dropdown-menu.show {
-    max-height: 60vh;
+    max-height: 75vh;
     overflow-y: scroll;
   }
+
+  /* .horizoantal-flter {
+    width: 120px !important;
+    top: -130px !important;
+    left: -15px !important;
+  } */
 }
 
 
