@@ -1414,7 +1414,10 @@ input[type="range"]::-moz-range-thumb {
   right: 11.5rem;
   top: 10px;
 }
-
+.inner-table-ul a{
+  word-wrap: break-word;
+    width: 150px;
+}
 .payment-ul-li li {
   display: -webkit-inline-box;
   width: 300px;
