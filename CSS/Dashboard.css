@@ -1414,10 +1414,17 @@ input[type="range"]::-moz-range-thumb {
   right: 11.5rem;
   top: 10px;
 }
-.main-link-domain{
+
+.main-link-domain {
   word-wrap: break-word;
-    width: 150px;
+  width: 150px;
 }
+
+.category-serve span {
+  word-wrap: break-word;
+  width: 155px;
+}
+
 .payment-ul-li li {
   display: -webkit-inline-box;
   width: 300px;
