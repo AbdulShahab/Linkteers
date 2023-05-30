@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Dashboard</title>
+  <title>Domain Result</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,9 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/Country_Filter_sesarch.js"></script>
 
 
 
@@ -41,7 +43,7 @@
             <li class="nav-item nav-btn-head"><a class="nav-link " href="#">+ Add Funds</a></li>
           </ul>
         </nav>
-  
+
         <div class="col-lg-2 col-md-4 col-sm-12 col-12 avatar-logout navbar_links_01">
           <ul class="nav">
             <li><i class="fa fa-heart" aria-hidden="true"></i></li>
@@ -78,14 +80,21 @@
               <div class="filter-btn">
                 <i class="fa fa-filter" aria-hidden="true"> <span> Advance Filter</span> </i>
               </div>
-  
+
               <div class="inner-side-bar">
                 <div class="sidebar-advn-fltr">
                   <h4> Client URL:</h4>
                   <input class="form-control" type="text" placeholder=" Enter Your URL" name="" id="">
                 </div>
                 <div class="sidebar-advn-fltr">
-                  <h4> Hosting Location:</h4>
+                  <h4>Tracking Location:</h4>
+                  <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US"
+                    data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+                    data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback">
+                  </div>
+                </div>
+                <div class="sidebar-advn-fltr">
+                  <h4> Tracking Location:</h4>
                   <input class="form-control" type="text" placeholder="Enter Hosting Location" name="" id="">
                 </div>
                 <div class="sidebar-advn-fltr">
@@ -93,6 +102,20 @@
                   <div class="traffc-percentage">
                     <input class="form-control" type="number" placeholder="Min Value" name="" id="">
                     <input class="form-control" type="number" placeholder="Max Value" name="" id="">
+                  </div>
+                </div>
+
+                <div class="sidebar-advn-fltr">
+                  <h4>Backlink:</h4>
+                  <div class="traffc-percentage link_type-main">
+                    <label for="link-type-01">
+                      <input class="" type="radio" name="link-type-01" placeholder="Min Value" name=""
+                        id="link-type-01">
+                      DoFollow</label>
+                    <label for="link-type-02">
+                      <input class="" type="radio" name="link-type-01" placeholder="Max Value" name=""
+                        id="link-type-02">
+                      NoFollow</label>
                   </div>
                 </div>
               </div>
@@ -109,7 +132,8 @@
             <div class="for_table-overflo">
               <div class="main-table">
                 <ul class="inner-table-ul" style="display: flex;">
-                  <li style="display: flex;"><a class="domains-anchors" href="#">meaningofhindi.com</a>
+                  <li style="display: flex; word-break: inherit;width: inherit;"><a class="domains-anchors"
+                      href="#">meaningofhindi.com</a>
                     <span style="border-left:1px dotted;padding-left: 15px;
                                     ">meaningofhindi.com</span>
                   </li>
@@ -120,7 +144,8 @@
                   <li></li>
                   <li></li>
                   <li></li>
-                  <li><button> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+                  <li style="word-break: inherit;width: 225px;"><button> <i class="fa fa-shopping-cart "
+                        aria-hidden="true"></i> +Add</button></li>
                 </ul>
               </div>
               <div class="domain-detection">
@@ -145,7 +170,32 @@
 
 
 
+    <script>
+      function onChangeCallback(ctr) {
+        console.log("The country was changed: " + ctr);
+        //$("#selectionSpan").text(ctr);
+      }
 
+      $(document).ready(function () {
+        $(".niceCountryInputSelector").each(function (i, e) {
+          new NiceCountryInput(e).init();
+        });
+      });
+    </script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     <script>
       /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
       var dropdown = document.getElementsByClassName("dropdown-btn");
