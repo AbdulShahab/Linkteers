@@ -519,6 +519,10 @@ table thead {
   font-size: 14px;
   display: flex;
   align-items: center;
+  width: 160px;
+  justify-content: center;
+  word-break: break-word;
+  padding: 0px 5px;
 }
 
 .inner-table-ul li a {
@@ -558,7 +562,6 @@ table thead {
 
 .inner-table-ul {
   display: flex;
-  justify-content: space-between;
   padding: 10px 15px;
   margin-bottom: 0px;
   color: #000;
