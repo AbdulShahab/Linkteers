@@ -13,8 +13,11 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/Easy-Any-Content-Pagination-Plugin-jQuery-Paginate-js/src/jquery.paginate.css" />
   <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script src="js/Double_Range_Slider.js"></script>
+  <script src="js/Double_Range_Slider_DA.js"></script>
+  <script src="js/Double_Range_Slider_DR.js"></script>
+  <script src="js/Country_Filter_sesarch.js"></script>
 </head>
 <style>
 
@@ -87,7 +90,7 @@
                 <input class="form-control" type="text" placeholder=" Enter Your URL" name="" id="">
               </div>
               <div class="sidebar-advn-fltr">
-                <h4> Hosting Location:</h4>
+                <h4> Tracking Location:</h4>
                 <input class="form-control" type="text" placeholder="Enter Hosting Location" name="" id="">
               </div>
               <div class="sidebar-advn-fltr">
@@ -97,31 +100,49 @@
                   <input class="form-control" type="number" placeholder="Max Value" name="" id="">
                 </div>
               </div>
+              <div class="sidebar-advn-fltr">
+                <h4>Tracking Location:</h4>
+                <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US"
+                  data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+                  data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback" />
+              </div>
+              <div class="sidebar-advn-fltr">
+                <h4>Backlink:</h4>
+                <div class="traffc-percentage link_type-main">
+                  <label for="link-type-01">
+                    <input class="" type="radio" name="link-type-01" placeholder="Min Value" name="" id="link-type-01">
+                    DoFollow</label>
+                  <label for="link-type-02">
+                    <input class="" type="radio" name="link-type-01" placeholder="Max Value" name="" id="link-type-02">
+                    NoFollow</label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="all-content-main-col col-lg-9 col-md-9">
-          <div class="main-content-header">
-            <!-- <div class="main-content-heading">
+      </div>
+      <div class="all-content-main-col col-lg-9 col-md-9">
+        <div class="main-content-header">
+          <!-- <div class="main-content-heading">
               <h3>People to Purchase Links</h3>
             </div> -->
-            <div class="sorting-bar">
-              <div class="row">
-                <div class="col-lg-7 col-md-7">
-                  <div class="inner-sort-btn">
-                    <ul class="nav">
-                      <li class="" style="background-color: #fff; border-right:1px solid #e9e9e9">
-                        <div class="dropdown">
-                          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Sort By Name
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" id="acen-order" href="#">Ascending </a></li>
-                            <li><a class="dropdown-item" id="decen-order" href="#">descending </a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <!-- <li class="">
+          <div class="sorting-bar">
+            <div class="row">
+              <div class="col-lg-7 col-md-7">
+                <div class="inner-sort-btn">
+                  <ul class="nav">
+                    <li class="" style="background-color: #fff; border-right:1px solid #e9e9e9">
+                      <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sort By Name
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" id="acen-order" href="#">Ascending </a></li>
+                          <li><a class="dropdown-item" id="decen-order" href="#">descending </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <!-- <li class="">
                         <div class="">
                           <button class="filtr-btn-header" type="button">
                             <i class="fa fa-filter" aria-hidden="true"></i>
@@ -129,192 +150,330 @@
                           </button>
                         </div>
                       </li> -->
-                      <li class="dropdown filter-dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false" style="position: absolute;height: 150px;top: 5px;">
-                          Filters
-                        </a>
+                    <li class="dropdown filter-dropdown">
+                      <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="position: absolute;height: 150px;top: 5px;">
+                        Filters
+                      </a>
 
 
-                      </li>
-                    </ul>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
-                <div class="col-lg-1 col-md-1"></div>
-                <div class="col-lg-4 col-md-4 input-services">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Website">
-                    <div class="input-group-append">
-                      <button class="input-btn-header" type="button">
-                        <i class="fa fa-search"></i>
-                      </button>
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                    </div>
+              </div>
+              <div class="col-lg-1 col-md-1"></div>
+              <div class="col-lg-4 col-md-4 input-services">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Website">
+                  <div class="input-group-append">
+                    <button class="input-btn-header" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="horizoantal-flter for_table-overflo">
-            <ul>
-              <li class="flter-head">DA</li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+        </div>
+        <div class="horizoantal-flter for_table-overflo">
+          <ul>
+            <li class="flter-head">DA</li>
+            <li>
+              <div id="slider-range-DA"></div>
+              <div class="row slider-labels">
+                <div class="col-6 caption">
+                  <strong>Min:</strong> <span id="slider-range-DA-value1"></span>
+                </div>
+                <div class="col-6 text-right caption">
+                  <strong>Max:</strong> <span id="slider-range-DA-value2"></span>
+                </div>
+              </div>
+              <form>
+                <input type="hidden" name="min-value" value="">
+                <input type="hidden" name="max-value" value="">
+              </form>
+            </li>
+          </ul>
+          <ul>
+            <li class="flter-head">Website Niche</li>
+            <li><select class="form-control filtr-frm-cntrl" name="" id="" multiple>
+                <option value="">Option1</option>
+                <option value="">Option2</option>
+                <option value="">Option3</option>
+              </select>
+            </li>
+          </ul>
+          <ul>
+            <li class="flter-head">DR </li>
+            <li>
+              <div id="slider-range-Dr"></div>
+              <div class="row slider-labels">
+                <div class="col-6 caption">
+                  <strong>Min:</strong> <span id="slider-range-DR-value1"></span>
+                </div>
+                <div class="col-6 text-right caption">
+                  <strong>Max:</strong> <span id="slider-range-DR-value2"></span>
+                </div>
+              </div>
+              <form>
+                <input type="hidden" name="min-value" value="">
+                <input type="hidden" name="max-value" value="">
+              </form>
+            </li>
+          </ul>
+          <ul>
+            <li class="flter-head"> Ahref Traffic </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+            </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+            </li>
+          </ul>
+          <ul>
+            <li class="flter-head">SEMRush Traffic </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+            </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+            </li>
+          </ul>
+          <!-- <ul>
+            <li class="flter-head">Link Type </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+            </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+            </li>
+          </ul> -->
+          <ul>
+            <li class="flter-head">Spam Score </li>
+            <!-- <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
               </li>
               <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+              </li> -->
+            <li>
+              <div id="slider-range"></div>
+              <div class="row slider-labels">
+                <div class="col-6 caption">
+                  <strong>Min:</strong> <span id="slider-range-value1"></span>
+                </div>
+                <div class="col-6 text-right caption">
+                  <strong>Max:</strong> <span id="slider-range-value2"></span>
+                </div>
+              </div>
+              <form>
+                <input type="hidden" name="min-value" value="">
+                <input type="hidden" name="max-value" value="">
+              </form>
+            </li>
+          </ul>
+          <ul>
+            <li class="flter-head">Price </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+            </li>
+            <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+            </li>
+          </ul>
+        </div>
+        <div class="for_table-overflo">
+          <div class="main-table">
+            <ul class="header-table-ul" style="display: flex;">
+              <li class="li-first-child">Website URL <span> TOP SELLER</span> </li>
+              <li class="sorting-icons" style="position: relative;right: 8px;">DA <div class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+
               </li>
-            </ul>
-            <ul>
-              <li class="flter-head">Website Niche</li>
-              <li><select class="form-control filtr-frm-cntrl" name="" id="" multiple>
-                  <option value="">Option1</option>
-                  <option value="">Option2</option>
-                  <option value="">Option3</option>
-                </select>
+              <li class="sorting-icons" style="position: relative;right: 15px;">Ahrefs <div class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
               </li>
-            </ul>
-            <ul>
-              <li class="flter-head">DR </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+              <li class="sorting-icons" style="position: relative;right: 40px;">Semrush <div
+                  class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
               </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+              <li class="sorting-icons" style="position: relative;right: 50px;">Backlink <div
+                  class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
               </li>
-            </ul>
-            <ul>
-              <li class="flter-head"> Ahref Traffic </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
+              <li class="sorting-icons" style="position: relative;right: 55px;">Guest Post <div
+                  class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
               </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
-              </li>
-            </ul>
-            <ul>
-              <li class="flter-head">SEMRush Traffic </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
-              </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
-              </li>
-            </ul>
-            <ul>
-              <li class="flter-head">Link Type </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
-              </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
-              </li>
-            </ul>
-            <ul>
-              <li class="flter-head">Spam Score </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
-              </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
-              </li>
-            </ul>
-            <ul>
-              <li class="flter-head">Price </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Min value">
-              </li>
-              <li><input class="form-control filtr-frm-cntrl" type="number" name="" id="" placeholder="Max Vlaue">
+              <li class="sorting-icons" style="position: relative;right: 35px;">Action <div class="sorting-table-caret">
+                  <i class="fa fa-caret-up" aria-hidden="true"></i>
+                  <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
               </li>
             </ul>
           </div>
-          <div class="for_table-overflo" id="example">
 
-            <div class="main-table">
-              <ul class="header-table-ul" style="display: flex;">
-                <li class="li-first-child">Website URL <span> TOP SELLER</span> </li>
-                <li class="sorting-icons" style="position: relative;right: 8px;">DA <div class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-
+          <div id="main-table-div" id="example">
+            <div class="main-table" data-sort="neaningofhindi.com" id="myData">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">neaningofhindi.cosdfasdfsadfasdfsadfsadfasdfasdfasdfasdm</a>
+                  <span>Category:Agriculture+32Category:Agriculture+32Category:Agriculture+32</span>
                 </li>
-                <li class="sorting-icons" style="position: relative;right: 15px;">Ahrefs <div
-                    class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-                </li>
-                <li class="sorting-icons" style="position: relative;right: 40px;">Semrush <div
-                    class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-                </li>
-                <li class="sorting-icons" style="position: relative;right: 50px;">Backlink <div
-                    class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-                </li>
-                <li class="sorting-icons" style="position: relative;right: 55px;">Guest Post <div
-                    class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-                </li>
-                <li class="sorting-icons" style="position: relative;right: 35px;">Action <div
-                    class="sorting-table-caret">
-                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                  </div>
-                </li>
+                <li>64sdfasdfasdfasdfasdfasdfasdfasdfasdfasdf</li>
+                <li>10asdfasdfasdfasdfasfddddddddddasdfasdfasdfask</li>
+                <li>0asdfasdfaaasfddddddddddddddsdfasdfasdfasdfasdf </li>
+                <li>2Dofsafdasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaollow</li>
+                <li>$4sadfasdfasdfasdfasdfasdfasdfasdf4</li>
+                <li><button id="myButton"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
               </ul>
             </div>
-
-            <div id="main-table-div">
-              <div class="main-table" data-sort="neaningofhindi.com" id="myData">
-                <ul class="inner-table-ul" style="display: flex;">
-                  <li style="display: grid;" class="category-serve"><a class="main-link-domain"
-                      href="#">neaningofhindi.cosdfasdfsadfasdfsadfsadfasdfasdfasdfasdm</a>
-                    <span>Category:Agriculture+32Category:Agriculture+32Category:Agriculture+32</span>
-                  </li>
-                  <li>64sdfasdfasdfasdfasdfasdfasdfasdfasdfasdf</li>
-                  <li>10asdfasdfasdfasdfasfddddddddddasdfasdfasdfask</li>
-                  <li>0asdfasdfaaasfddddddddddddddsdfasdfasdfasdfasdf </li>
-                  <li>2Dofsafdasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaollow</li>
-                  <li>$4sadfasdfasdfasdfasdfasdfasdfasdf4</li>
-                  <li><button id="myButton"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
-                </ul>
-              </div>
-              <div class="main-table" data-sort="aeaningofhindi.com">
-                <ul class="inner-table-ul" style="display: flex;">
-                  <li style="display: grid;" class="category-serve"><a class="main-link-domain"
-                      href="#">aeaningofhindi.com</a>
-                    <span>Category:Agriculture+32</span>
-                  </li>
-                  <li>10</li>
-                  <li>15K</li>
-                  <li>20 </li>
-                  <li>2Dofollow</li>
-                  <li>$44</li>
-                  <li><button id="myButton1"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
-                </ul>
-              </div>
-              <div class="main-table" data-sort="ceaningofhindi.com">
-                <ul class="inner-table-ul" style="display: flex;">
-                  <li style="display: grid;" class="category-serve"><a class="main-link-domain"
-                      href="#">ceaningofhindi.com</a>
-                    <span>Category:Agriculture+32</span>
-                  </li>
-                  <li>74</li>
-                  <li>150K</li>
-                  <li>300 </li>
-                  <li>2Dofollow</li>
-                  <li>$44</li>
-                  <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
-                </ul>
-              </div>
+            <div class="main-table" data-sort="aeaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">aeaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>10</li>
+                <li>15K</li>
+                <li>20 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton1"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
+            </div>
+            <div class="main-table" data-sort="ceaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">ceaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>74</li>
+                <li>150K</li>
+                <li>300 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
+            </div>
+            <div class="main-table" data-sort="ceaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">ceaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>74</li>
+                <li>150K</li>
+                <li>300 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
+            </div>
+            <div class="main-table" data-sort="ceaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">ceaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>74</li>
+                <li>150K</li>
+                <li>300 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
+            </div>
+            <div class="main-table" data-sort="ceaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">ceaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>74</li>
+                <li>150K</li>
+                <li>300 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
+            </div>
+            <div class="main-table" data-sort="ceaningofhindi.com">
+              <ul class="inner-table-ul" style="display: flex;">
+                <li style="display: grid;" class="category-serve"><a class="main-link-domain"
+                    href="#">ceaningofhindi.com</a>
+                  <span>Category:Agriculture+32</span>
+                </li>
+                <li>74</li>
+                <li>150K</li>
+                <li>300 </li>
+                <li>2Dofollow</li>
+                <li>$44</li>
+                <li><button id="myButton2"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+              </ul>
             </div>
           </div>
-
         </div>
+        <style>
+          h1 {
+            margin-bottom: 1.25em;
+          }
+
+          #pagination-demo {
+            display: inline-block;
+            margin-bottom: 1.75em;
+          }
+
+          #pagination-demo li {
+            display: inline-block;
+          }
+
+          .page-content {
+            background: #eee;
+            display: inline-block;
+            padding: 10px;
+            width: 100%;
+            max-width: 660px;
+          }
+        </style>
+        <ul id="pagination-demo" class="pagination-sm"></ul>
+        
+
+
       </div>
+    </div>
     </div>
   </section>
   </div>
-  <script src="/Easy-Any-Content-Pagination-Plugin-jQuery-Paginate-js/src/jquery.paginate.js"></script>
   <script>
-    //call paginate
-    $('#example').paginate();
+    function onChangeCallback(ctr) {
+      console.log("The country was changed: " + ctr);
+      //$("#selectionSpan").text(ctr);
+    }
+
+    $(document).ready(function () {
+      $(".niceCountryInputSelector").each(function (i, e) {
+        new NiceCountryInput(e).init();
+      });
+    });
   </script>
+  </div>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+ 
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -478,7 +637,30 @@
     integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
+  <script>
 
+    var item_perpage = 6;
+    var total_pages= Math.ceil($('#main-table-div .main-table').length/item_perpage);
+
+    $('#main-table-div .main-table').hide();
+    $('#pagination-demo').twbsPagination({
+      totalPages: total_pages,
+      visiblePages: 6,
+      
+      next: 'Next',
+      prev: 'Prev',
+      onPageClick: function (event, page) {
+        //fetch content and render here 
+        $('#main-table-div .main-table').hide();
+        var startfrom = (page*item_perpage)-item_perpage;
+       
+        for(var i=startfrom;i<startfrom+item_perpage;i++){
+        $('#main-table-div .main-table').eq(i).show();
+        }
+      }
+    });
+  </script>
 
 </body>
 
