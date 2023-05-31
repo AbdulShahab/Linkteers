@@ -1068,7 +1068,7 @@ input {
   margin-top: 20px;
 }
 
-#citation_div ol {
+.citation-div ol {
   list-style: none;
 
 }
@@ -1079,12 +1079,12 @@ input {
   background: #D6D7D9;
 }
 
-#citation_div ol li {
+.citation-div ol li {
   width: 150px;
   font-size: 12px;
 }
 
-div#citation_div {
+.citation-div {
   background-color: #fff;
   border-radius: 10px;
   padding: 25px 0px;
@@ -1104,13 +1104,13 @@ div#citation_div {
   color: #9a0808;
 }
 
-#citation_div .form-control {
+.citation-div .form-control {
   padding: 6px 5px !important;
   margin-right: 10px !important;
   width: 85%;
 }
 
-#citation_div ol button {
+.citation-div ol button {
   border: none;
   padding: 10px 15px;
   border-radius: 23px;
