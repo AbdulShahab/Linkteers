@@ -305,6 +305,7 @@
                     <i class="fa fa-caret-down" aria-hidden="true"></i>
                   </div>
                 </li>
+                <li class="sorting-icons" style="position: relative;right: 35px;">...</li>
               </ul>
             </div>
 
@@ -321,7 +322,49 @@
                   <li>2Dofollow</li>
                   <li>$44</li>
                   <li><button id="myButton1"> <i class="fa fa-shopping-cart " aria-hidden="true"></i> +Add</button></li>
+                  <li id="citationButton" style="cursor: pointer;">...</li>
                 </ul>
+
+              </div>
+              <div id="citation_div">
+                <ol class="" style="display: flex;">
+                  <li>Ahrefs</li>
+                  <li>Domain Rating :<span>29</span></li>
+                  <li>Referring Domains : <span>1.1k</span></li>
+                  <li>Toatl Backlink : <span>7.9k</span> </li>
+                  <li>Toatl Keywords : <span>NA</span> </li>
+                  <li>Minimum Word Count : <Span>500</Span></li>
+                </ol>
+                <ol class="" style="display: flex;">
+                  <li>Semrush</li>
+                  <li>Authority score :<span>29</span></li>
+                  <li>Referring Domains : <span>1.1k</span></li>
+                  <li>Toatl Backlink <span>7.9k</span> </li>
+                  <li> <span></span> </li>
+                  <li>Completion Ratio : <Span>NA</Span></li>
+                </ol>
+                <ol class="" style="display: flex;align-items: center;">
+                  <li>Citation Flow:</li>
+                  <li><input type="text" class="form-control" placeholder="min-value"></li>
+                  <li><input type="text" class="form-control" placeholder="max-value"></li>
+                </ol>
+                <ol class="" style="display: flex;align-items: center;">
+                  <li>Trust Flow:</li>
+                  <li><input type="text" class="form-control" placeholder="min-value"></li>
+                  <li><input type="text" class="form-control" placeholder="max-value"></li>
+                </ol>
+                <ol class="" style="display: flex;">
+                  <li class="citation-list01"><button><i class="fa fa-info-circle" aria-hidden="true"></i>
+                      Guidlines</button></li>
+                  <li class="citation-list02"><button><i class="fa fa-heart" aria-hidden="true"></i>
+                      Add To Wishlist</button></li>
+                  <li class="citation-list03"><button><i class="fa fa-minus" aria-hidden="true"></i>
+                      Add To Blocklist</button></li>
+                  <li><button><a href="#">View Sample</a></button></li>
+                  <li style="width: 180px;"><button>
+                      <p class="badge m-0">New</p> Traffic By Country <span>NA</span>
+                    </button></li>
+                </ol>
               </div>
               <div class="main-table" data-sort="ceaningofhindi.com">
                 <ul class="inner-table-ul" style="display: flex;">
@@ -402,7 +445,18 @@
     </div>
   </section>
 
+  <script>
+    $(document).ready(function () {
+      // Hide the div on page load
+      $("#citation_div").hide();
 
+      // Toggle the div on button click
+      $("#citationButton").click(function () {
+        $("#citation_div").toggle();
+      });
+    });
+
+  </script>
   <!-- -------------------------------Added button in data table--------------------------------- -->
   <script>
     $(document).ready(function () {
@@ -641,8 +695,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
- <!-- --------------------------------PAgination JS---------------------------------------------- -->
- <script>
+  <!-- --------------------------------PAgination JS---------------------------------------------- -->
+  <script>
 
     var item_perpage = 3;
     var total_pages = Math.ceil($('#main-table-div .main-table').length / item_perpage);

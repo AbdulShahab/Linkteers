@@ -1068,10 +1068,52 @@ input {
   margin-top: 20px;
 }
 
+#citation_div ol {
+  list-style: none;
+
+}
+
 /* Styling;
  */
 .noUi-background {
   background: #D6D7D9;
+}
+
+#citation_div ol li {
+  width: 150px;
+  font-size: 12px;
+}
+
+div#citation_div {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 0px;
+  margin-bottom: 15px;
+}
+
+.citation-list01 button {
+  background-color: rgb(173, 173, 196);
+  color: #08509a;
+}
+.citation-list02 button {
+  background-color: rgb(173, 196, 183);
+  color: #089a4a;
+}
+.citation-list03 button {
+  background-color: rgb(196, 173, 173);
+  color: #9a0808;
+}
+
+#citation_div .form-control {
+  padding: 6px 5px !important;
+  margin-right: 10px !important;
+  width: 85%;
+}
+
+#citation_div ol button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 23px;
 }
 
 .noUi-connect {
