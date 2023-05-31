@@ -91,31 +91,6 @@
                   <input class="form-control" type="text" placeholder="Enter Hosting Location" name="" id="">
                 </div>
                 <div class="sidebar-advn-fltr">
-                  <h4> Traffic Percentage:</h4>
-                  <div class="traffc-percentage">
-                    <input class="form-control" type="number" placeholder="Min Value" name="" id="">
-                    <input class="form-control" type="number" placeholder="Max Value" name="" id="">
-                  </div>
-                </div>
-                <div class="sidebar-advn-fltr">
-                  <h4> Citation Flow:</h4>
-                  <div class="traffc-percentage">
-                    <label class="form-control" for="citation-min">
-                      <input type="radio" placeholder="" name="citation-flow" id="citation-min"> Min Value</label>
-                    <label class="form-control" for="citation-Max">
-                      <input type="radio" placeholder="" name="citation-flow" id="citation-Max"> Max Value</label>
-                  </div>
-                </div>
-                <div class="sidebar-advn-fltr">
-                  <h4> Trust Flow:</h4>
-                  <div class="traffc-percentage">
-                    <label class="form-control" for="Trust-min">
-                      <input type="radio" placeholder="" name="Trust-Flow" id="Trust-min"> Min Value</label>
-                    <label class="form-control" for="Trust-Max">
-                      <input type="radio" placeholder="" name="Trust-Flow" id="Trust-Max"> Max Value</label>
-                  </div>
-                </div>
-                <div class="sidebar-advn-fltr">
                   <h4> Traffic By Country:</h4>
                   <div id="countryFilter">
                     <input class="form-control" type="text" id="searchInput" placeholder="Search country">
@@ -124,10 +99,25 @@
                   <div id="countryList">
                     <!-- Country list will be populated dynamically -->
                   </div>
-
-                  <button class="flter-country-btn" id="showMoreBtn">Show More</button>
-                  <button class="flter-country-btn" id="showLessBtn" style="display: none;">Show Less</button>
-
+                  <div class="show-btns-country-flter">
+                    <button class="flter-country-btn" id="showMoreBtn">Show More</button>
+                    <button class="flter-country-btn" id="showLessBtn" style="display: none;">Show Less</button>
+                  </div>
+                </div>
+                <div class="sidebar-advn-fltr">
+                  <h4> Traffic Percentage:</h4>
+                  <div class="traffc-percentage">
+                    <input class="form-control" type="number" placeholder="Min Value" name="" id="">
+                    <input class="form-control" type="number" placeholder="Max Value" name="" id="">
+                  </div>
+                </div>
+                <div class="sidebar-advn-fltr citation-services">
+                  <label class="" for="citation-min">
+                    <input type="radio" placeholder="" name="flow" id="citation-min"> Citation Flow:</label>
+                </div>
+                <div class="sidebar-advn-fltr citation-services">
+                  <label class="" for="Trust-min">
+                    <input type="radio" placeholder="" name="flow" id="Trust-min"> Trust Flow:</label>
                 </div>
               </div>
             </div>

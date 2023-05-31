@@ -54,6 +54,11 @@
         transition: 2s ease;
         outline: none;
         color: #38627b;
+        font-size: 13px;
+    }
+
+    .tab-butn label {
+        font-size: 12px;
     }
 
     .cart-inner-tab-01 h3 {
@@ -85,6 +90,14 @@
         font-size: 16px;
         height: 24px;
         width: 24px;
+    }
+
+    .cart-form-main input {
+        padding: 7px 10px !important;
+    }
+
+    .cart-form-main select {
+        padding: 5px 10px !important;
     }
 
     .quantity input {
@@ -261,8 +274,9 @@
     .label-txt-inner {
         color: #575757;
         font-weight: 500;
-        margin-top: 20px;
-        font-size: 18px;
+        margin-top: 15px;
+        font-size: 13px;
+        margin-bottom: 5px;
     }
 
     .label-txt-inner span {
