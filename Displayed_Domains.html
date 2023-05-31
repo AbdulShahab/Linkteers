@@ -13,7 +13,6 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="js/Country_Filter_sesarch.js"></script>
 
 
 
@@ -88,13 +87,6 @@
                   <input class="form-control" type="text" placeholder=" Enter Your URL" name="" id="">
                 </div>
                 <div class="sidebar-advn-fltr">
-                  <h4>Tracking Location:</h4>
-                  <div class="niceCountryInputSelector" style="width: 300px;" data-selectedcountry="US"
-                    data-showspecial="false" data-showflags="true" data-i18nall="All selected"
-                    data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback">
-                  </div>
-                </div>
-                <div class="sidebar-advn-fltr">
                   <h4> Tracking Location:</h4>
                   <input class="form-control" type="text" placeholder="Enter Hosting Location" name="" id="">
                 </div>
@@ -105,19 +97,37 @@
                     <input class="form-control" type="number" placeholder="Max Value" name="" id="">
                   </div>
                 </div>
-
                 <div class="sidebar-advn-fltr">
-                  <h4>Backlink:</h4>
-                  <div class="traffc-percentage link_type-main">
-                    <label for="link-type-01">
-                      <input class="" type="radio" name="link-type-01" placeholder="Min Value" name=""
-                        id="link-type-01">
-                      DoFollow</label>
-                    <label for="link-type-02">
-                      <input class="" type="radio" name="link-type-01" placeholder="Max Value" name=""
-                        id="link-type-02">
-                      NoFollow</label>
+                  <h4> Citation Flow:</h4>
+                  <div class="traffc-percentage">
+                    <label class="form-control" for="citation-min">
+                      <input type="radio" placeholder="" name="citation-flow" id="citation-min"> Min Value</label>
+                    <label class="form-control" for="citation-Max">
+                      <input type="radio" placeholder="" name="citation-flow" id="citation-Max"> Max Value</label>
                   </div>
+                </div>
+                <div class="sidebar-advn-fltr">
+                  <h4> Trust Flow:</h4>
+                  <div class="traffc-percentage">
+                    <label class="form-control" for="Trust-min">
+                      <input type="radio" placeholder="" name="Trust-Flow" id="Trust-min"> Min Value</label>
+                    <label class="form-control" for="Trust-Max">
+                      <input type="radio" placeholder="" name="Trust-Flow" id="Trust-Max"> Max Value</label>
+                  </div>
+                </div>
+                <div class="sidebar-advn-fltr">
+                  <h4> Traffic By Country:</h4>
+                  <div id="countryFilter">
+                    <input class="form-control" type="text" id="searchInput" placeholder="Search country">
+                  </div>
+
+                  <div id="countryList">
+                    <!-- Country list will be populated dynamically -->
+                  </div>
+
+                  <button class="flter-country-btn" id="showMoreBtn">Show More</button>
+                  <button class="flter-country-btn" id="showLessBtn" style="display: none;">Show Less</button>
+
                 </div>
               </div>
             </div>
@@ -234,30 +244,90 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
 
+    <!-- --------------------Country Select ------------------------------------------ -->
     <script>
-      function onChangeCallback(ctr) {
-        console.log("The country was changed: " + ctr);
-        //$("#selectionSpan").text(ctr);
-      }
-
       $(document).ready(function () {
-        $(".niceCountryInputSelector").each(function (i, e) {
-          new NiceCountryInput(e).init();
+        // Country data
+        var countries = [
+          { name: "USA", code: "usa" },
+          { name: "UK", code: "uk" },
+          { name: "Germany", code: "germany" },
+          { name: "France", code: "france" },
+          { name: "Spain", code: "spain" },
+          { name: "Italy", code: "italy" },
+          { name: "Canada", code: "canada" },
+          { name: "Australia", code: "australia" },
+          { name: "Japan", code: "japan" },
+          { name: "Brazil", code: "brazil" },
+          { name: "India", code: "india" },
+          { name: "China", code: "china" },
+          { name: "Russia", code: "russia" },
+          { name: "Mexico", code: "mexico" },
+          { name: "Argentina", code: "argentina" }
+        ];
+
+        var displayedCountries = 3;
+        var loadMoreIncrement = 20;
+
+        // Populate initial country list
+        populateCountryList(countries, displayedCountries);
+
+        // Search input keyup event
+        $('#searchInput').on('keyup', function () {
+          var searchTerm = $(this).val().toLowerCase();
+          filterCountries(searchTerm);
         });
+
+        // Show more button click event
+        $('#showMoreBtn').on('click', function () {
+          displayedCountries += loadMoreIncrement;
+          populateCountryList(countries, displayedCountries);
+        });
+
+        // Show less button click event
+        $('#showLessBtn').on('click', function () {
+          displayedCountries = 3;
+          populateCountryList(countries, displayedCountries);
+        });
+
+        // Function to populate country list
+        function populateCountryList(countries, count) {
+          $('#countryList').empty(); // Clear existing list
+
+          // Iterate through each country
+          for (var i = 0; i < count && i < countries.length; i++) {
+            var country = countries[i];
+            $('#countryList').append('<div><input type="radio" name="country" value="' + country.code + '"> ' + country.name + '</div>');
+          }
+
+          // Show or hide the "Show More" and "Show Less" buttons based on the remaining countries
+          if (count < countries.length) {
+            $('#showMoreBtn').show();
+          } else {
+            $('#showMoreBtn').hide();
+          }
+
+          if (count > 3) {
+            $('#showLessBtn').show();
+          } else {
+            $('#showLessBtn').hide();
+          }
+
+          // Show the country list container
+          $('#countryList').show();
+        }
+
+        // Function to filter countries based on the search term
+        function filterCountries(searchTerm) {
+          var filteredCountries = countries.filter(function (country) {
+            return country.name.toLowerCase().includes(searchTerm);
+          });
+
+          displayedCountries = 3; // Reset the displayed count
+          populateCountryList(filteredCountries, displayedCountries);
+        }
       });
-    </script>
-    <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36251023-1']);
-      _gaq.push(['_setDomainName', 'jqueryscript.net']);
-      _gaq.push(['_trackPageview']);
-
-      (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
 
     </script>
     <script>
