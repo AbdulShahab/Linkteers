@@ -656,8 +656,45 @@
     </div>
     </div>
   </section>
-
   <script>
+    $(function () {
+  var currentDiv = '';
+
+  $('#showdiv1').click(function () {
+    toggleDiv('#div1');
+  });
+
+  $('#showdiv2').click(function () {
+    toggleDiv('#div2');
+  });
+
+  $('#showdiv3').click(function () {
+    toggleDiv('#div3');
+  });
+
+  $('#showdiv4').click(function () {
+    toggleDiv('#div4');
+  });
+
+  $('#showdiv5').click(function () {
+    toggleDiv('#div5');
+  });
+
+  $('#showdiv6').click(function () {
+    toggleDiv('#div6');
+  });
+
+  function toggleDiv(divId) {
+    if (currentDiv !== divId) {
+      $(currentDiv).hide();
+      currentDiv = divId;
+    }
+    $(divId).toggle();
+  }
+});
+
+  </script>
+  <!-- <script>
     $(function () {
       $('#showdiv1').click(function () {
         $('div[id^=div]').hide();
@@ -685,9 +722,8 @@
         $('div[id^=div]').hide();
         $('#div6').show();
       });
-
     })
-  </script>
+  </script> -->
   <!-- -------------------------------Added button in data table--------------------------------- -->
   <script>
     $(document).ready(function () {
