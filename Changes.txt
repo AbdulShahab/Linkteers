@@ -1,0 +1,10 @@
+Changes In Linkteers:
+
+Make Country Search Filter
+Add a three dots Menu and its function also when you Click on three dots it Shows a horizontal tab bottom side of the row 
+Add Da,Dr,Spam Score a input double range with min max value
+Pagination 
+Checked Responsive
+When the website URl is to long it broke the alignment Resovle that Issue in every page
+Link type change to backlink
+Remove max and min values of double rangebar of DA,DR and Spam Score
