@@ -1,0 +1,40 @@
+              <div id="div2" class="citation-div" style="display:none;">
+                <ol class="" style="display: flex;">
+                  <li>Ahrefs</li>
+                  <li>Domain Rating :<span>29</span></li>
+                  <li>Referring Domains : <span>1.1k</span></li>
+                  <li>Toatl Backlink : <span>7.9k</span> </li>
+                  <li>Toatl Keywords : <span>NA</span> </li>
+                  <li>Minimum Word Count : <Span>500</Span></li>
+                </ol>
+                <ol class="" style="display: flex;">
+                  <li>Semrush</li>
+                  <li>Authority score :<span>29</span></li>
+                  <li>Referring Domains : <span>1.1k</span></li>
+                  <li>Toatl Backlink <span>7.9k</span> </li>
+                  <li> <span></span> </li>
+                  <li>Completion Ratio : <Span>NA</Span></li>
+                </ol>
+                <ol class="" style="display: flex;align-items: center;">
+                  <li>Citation Flow:</li>
+                  <li><input type="text" class="form-control" placeholder="Min Value"></li>
+                  <li><input type="text" class="form-control" placeholder="Max Value"></li>
+                </ol>
+                <ol class="" style="display: flex;align-items: center;">
+                  <li>Trust Flow:</li>
+                  <li><input type="text" class="form-control" placeholder="Min Value"></li>
+                  <li><input type="text" class="form-control" placeholder="Max Value"></li>
+                </ol>
+                <ol class="" style="display: flex;">
+                  <li class="citation-list01"><button><i class="fa fa-info-circle" aria-hidden="true"></i>
+                      Guidlines</button></li>
+                  <li class="citation-list02"><button><i class="fa fa-heart" aria-hidden="true"></i>
+                      Add To Wishlist</button></li>
+                  <li class="citation-list03"><button><i class="fa fa-minus" aria-hidden="true"></i>
+                      Add To Blocklist</button></li>
+                  <li><button><a href="#">View Sample</a></button></li>
+                  <li style="width: 180px;"><button>
+                      <p class="badge m-0">New</p> Traffic By Country <span>NA</span>
+                    </button></li>
+                </ol>
+              </div>
